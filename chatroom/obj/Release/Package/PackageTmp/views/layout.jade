@@ -1,0 +1,31 @@
+﻿doctype html
+html
+  head
+    title= title
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    link(rel='stylesheet' href='/css/bootstrap.min.css')
+    link(rel='stylesheet' href='/css/bootstrap-theme.min.css')
+    link(rel='stylesheet' href='/css/style.css')
+
+    block header_end
+ 
+  body
+    block content
+ 
+    script(type='text/javascript' src='https://code.jquery.com/jquery-2.1.1.min.js')
+    script(type='text/javascript' src='/js/bootstrap.min.js')
+    script(type='text/javascript' src='/socket.io/socket.io.js')
+    script(type='text/javascript' src='/js/bootstrap.min.js')
+
+    block body_end
+    script(type='text/javascript').
+      var socket = io();
+      $('#send-message-btn').click(function () {
+        var msg = $('#message-box').val();
+        socket.emit('chat', msg);
+        $('#messages').append($('<p>').text(msg));
+        $('#message-box').val
+        return false; });
+        socket.on('chat', function (msg) {
+        $('#messages').append($('<p>').text(msg)); });       

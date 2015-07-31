@@ -1,0 +1,2 @@
+C:\node\chatroom\chatroom\chatroom\bin\Microsoft.NodejsTools.WebRole.dll
+C:\node\chatroom\chatroom\chatroom\obj\Debug\chatroom.njsprojResolveAssemblyReference.cache
